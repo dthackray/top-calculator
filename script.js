@@ -14,7 +14,19 @@ function divide (a, b) {
     return a / b
 }
 
-console.log(add(2, 2))
-console.log(subtract(10, 3))
-console.log(multiply(2, 4))
-console.log(divide(50, 5))
+function operate (a, b, op) {
+    switch (op) {
+        case "+":
+            return add(a, b)
+            break
+        case "-":
+            return subtract(a, b)
+            break
+        case "*":
+            return multiply(a, b)
+            break
+        case "/":
+            return divide(a, b)
+            break
+    }
+}
