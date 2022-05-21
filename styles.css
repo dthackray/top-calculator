@@ -1,3 +1,7 @@
+body, button {
+    font-family: 'Inter', sans-serif;
+}
+
 .container {
     display: flex;
     align-items: center;
