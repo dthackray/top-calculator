@@ -26,5 +26,3 @@ function operate (a, b, op) {
             return divide(a, b)
     }
 }
-
-console.log(operate(2, 4, "+"))
