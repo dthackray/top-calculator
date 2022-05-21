@@ -24,3 +24,10 @@ body, button {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
   }
+
+.btn {
+    padding: 20px;
+    border: 2px black solid;
+    border-radius: 5px;
+    font-size: 20px;
+}
