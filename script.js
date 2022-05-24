@@ -1,3 +1,14 @@
+const numberButtons = document.querySelectorAll('.btn-number')
+const screen = document.getElementById('screen-main')
+
+numberButtons.forEach((button) =>
+    button.addEventListener('click', () => updateScreen(button.textContent))
+)
+
+function updateScreen(number) {
+    screen.textContent += number
+}
+
 function add (a, b) {
     return a + b
 }
