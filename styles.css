@@ -43,3 +43,11 @@ body, button {
     border-radius: 5px;
     font-size: 20px;
 }
+
+#btn-undo {
+  background-color: #b5b8ff;
+}
+
+#btn-clear {
+  background-color: #ff9191;
+}
