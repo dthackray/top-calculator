@@ -3,12 +3,20 @@ let shouldResetScreen = false
 const numberButtons = document.querySelectorAll('.btn-number')
 const screen = document.getElementById('screen-main')
 const clearButton = document.getElementById('btn-clear')
+const undoButton = document.getElementById('btn-undo')
 
 clearButton.addEventListener('click', () => resetScreen())
+undoButton.addEventListener('click', () => undoInput())
 
 numberButtons.forEach((button) =>
     button.addEventListener('click', () => updateScreen(button.textContent))
 )
+
+function undoInput() {
+    screen.textContent = screen.textContent
+    .toString()
+    .slice(0, -1)
+}
 
 function resetScreen() {
     screen.textContent = 0
