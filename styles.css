@@ -51,3 +51,7 @@ body, button {
 #btn-clear {
   background-color: #ff9191;
 }
+
+#screen-secondary {
+  font-size: 15px;
+}
