@@ -1,8 +1,11 @@
+let argument1 = ''
+let argument2 = ''
+let currentOperation = null
 let shouldResetScreen = false
 
 const numberButtons = document.querySelectorAll('.btn-number')
 const operatorButtons = document.querySelectorAll('.btn-operate')
-const screen = document.getElementById('screen-main')
+const screen = document.getElementById('screen-primary')
 const clearButton = document.getElementById('btn-clear')
 const undoButton = document.getElementById('btn-undo')
 
@@ -11,6 +14,10 @@ undoButton.addEventListener('click', () => undoInput())
 
 numberButtons.forEach((button) =>
     button.addEventListener('click', () => updateScreen(button.textContent))
+)
+
+operatorButtons.forEach((button) => 
+    button.addEventListener('click', () => setOperator(button.textContent))
 )
 
 function undoInput() {
@@ -34,6 +41,13 @@ function updateScreen(number) {
     }
     screen.textContent += number
 }
+
+function setOperator(operator) {
+    argument1 = screen.textContent
+    currentOperation = operator
+    lastOperationScreen.textContent = `${firstOperand} ${currentOperation}`
+    shouldResetScreen = true
+  }
 
 function add (a, b) {
     return a + b
