@@ -1,6 +1,7 @@
 let shouldResetScreen = false
 
 const numberButtons = document.querySelectorAll('.btn-number')
+const operatorButtons = document.querySelectorAll('.btn-operate')
 const screen = document.getElementById('screen-main')
 const clearButton = document.getElementById('btn-clear')
 const undoButton = document.getElementById('btn-undo')
