@@ -2,10 +2,17 @@ let shouldResetScreen = false
 
 const numberButtons = document.querySelectorAll('.btn-number')
 const screen = document.getElementById('screen-main')
+const clearButton = document.getElementById('btn-clear')
+
+clearButton.addEventListener('click', () => resetScreen())
 
 numberButtons.forEach((button) =>
     button.addEventListener('click', () => updateScreen(button.textContent))
 )
+
+function resetScreen() {
+    screen.textContent = 0
+}
 
 function clearScreen() {
     screen.textContent = ''
