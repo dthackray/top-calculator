@@ -5,6 +5,7 @@ let shouldResetScreen = false
 
 const numberButtons = document.querySelectorAll('.btn-number')
 const operatorButtons = document.querySelectorAll('.btn-operate')
+const equalsButton = document.getElementById('btn-equals')
 const screen = document.getElementById('screen-primary')
 const secondaryScreen = document.getElementById('screen-secondary')
 const clearButton = document.getElementById('btn-clear')
@@ -12,6 +13,7 @@ const undoButton = document.getElementById('btn-undo')
 
 clearButton.addEventListener('click', () => resetScreen())
 undoButton.addEventListener('click', () => undoInput())
+equalsButton.addEventListener('click', () => evaluate())
 
 numberButtons.forEach((button) =>
     button.addEventListener('click', () => updateScreen(button.textContent))
@@ -52,7 +54,7 @@ function setOperator(operator) {
     shouldResetScreen = true
   }
 
-  function evaluate() {
+function evaluate() {
     if (currentOperation === null || shouldResetScreen) return
     if (currentOperation === '/' && screen.textContent === '0') {
       alert("You can't divide by 0!")
