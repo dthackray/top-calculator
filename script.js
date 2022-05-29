@@ -81,6 +81,8 @@ function divide (a, b) {
 }
 
 function operate (a, b, op) {
+    a = Number(a)
+    b = Number(b)
     switch (op) {
         case "+":
             return add(a, b)
